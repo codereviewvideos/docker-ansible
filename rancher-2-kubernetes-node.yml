@@ -3,3 +3,5 @@
   hosts: rancher-2-kubernetes-nodes
   roles:
     - codereviewvideos.common
+    - geerlingguy.docker
+    - singleplatform-eng.users

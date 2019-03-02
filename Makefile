@@ -1,4 +1,4 @@
-.PHONY: create_role run_playbook
+.PHONY: create_role install_role run_playbook
 
 create_role:
 	@docker run --rm \
@@ -8,6 +8,13 @@ create_role:
 			$(role) \
 			--init-path=/etc/ansible/roles
 
+install_role:
+	@docker run --rm \
+		-v $(CURDIR):/crv-ansible \
+		-w /crv-ansible \
+		williamyeh/ansible:alpine3 \
+		ansible-galaxy install $(role)
+
 run_playbook:
 	@docker run --rm \
 		-v ~/.ssh/id_rsa:/root/.ssh/id_rsa \
@@ -15,4 +22,4 @@ run_playbook:
 		-v $(CURDIR):/crv-ansible \
 		-w /crv-ansible \
 		williamyeh/ansible:alpine3 \
-		ansible-playbook -i production site.yml -vvv
+		ansible-playbook -i production site.yml

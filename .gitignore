@@ -1,0 +1,6 @@
+# ignore everything in roles
+roles/*
+# but not anything starting with `codereviewvideos*`
+!roles/codereviewvideos*/
+# or any subdirectories of directories matching that pattern
+!roles/codereviewvideos*/**

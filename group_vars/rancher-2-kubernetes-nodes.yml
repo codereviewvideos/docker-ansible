@@ -1,0 +1,11 @@
+---
+docker_package: "docker-ce=17.03.2~ce-0~ubuntu-xenial"
+
+users:
+  - username: rancherk8s
+    name: Rancher 2 Kubernetes
+    password: $6$9YoxK.kTroTFg$w4kXWF5OzftJWLFT8t0a./Y3hTZtrs2L.bGdOZFF.HJDagHhCjOyuvsGQgbFfWp33YjmNvfFE4btEvGrTmn0W1
+    groups: ['docker']
+    uid: 1001
+    ssh_key:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDBMSUJJ6MbWw012X9jNiguXVDNGesNmR9k0B3stLlxfZdDSs0fqFbCEjFUK9skjTYpRbg7nIc1NecAvDFJ2FwNrHinfhxQe/vcTRHSERrX+j88R4bW8vRSRm8m6YrmdPrHpcivcgoPJeHpnIHBqW/GUGtDzc8noK7UW8zOBc+ZOxSdr1/zGOHvLizQWBnjU/dycG7erdbWN7JijOQwmepKp8+5ZLmE0Idz+8qS1Jt4zaIJ4L+TZ609D5aOv4znBUEMm0Q+sB7JKGBXDxQSNWjy4No4JfMzWAAd1rDbCAk9u+qsysST7Fz/nrgoiUBx0nPfjp2FTD5HUsKQD7nlfJ3n chris@a6software.co.uk"

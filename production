@@ -1,4 +1,4 @@
-etcd-0 ansible_host=209.97.181.80 ansible_python_interpreter=/usr/bin/python3
+etcd-0 ansible_host=68.183.43.205 ansible_python_interpreter=/usr/bin/python3
 
 [rancher-2-kubernetes-nodes]
 etcd-0

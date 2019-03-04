@@ -9,3 +9,20 @@ users:
     uid: 1001
     ssh_key:
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDBMSUJJ6MbWw012X9jNiguXVDNGesNmR9k0B3stLlxfZdDSs0fqFbCEjFUK9skjTYpRbg7nIc1NecAvDFJ2FwNrHinfhxQe/vcTRHSERrX+j88R4bW8vRSRm8m6YrmdPrHpcivcgoPJeHpnIHBqW/GUGtDzc8noK7UW8zOBc+ZOxSdr1/zGOHvLizQWBnjU/dycG7erdbWN7JijOQwmepKp8+5ZLmE0Idz+8qS1Jt4zaIJ4L+TZ609D5aOv4znBUEMm0Q+sB7JKGBXDxQSNWjy4No4JfMzWAAd1rDbCAk9u+qsysST7Fz/nrgoiUBx0nPfjp2FTD5HUsKQD7nlfJ3n chris@a6software.co.uk"
+
+firewall_allowed_tcp_ports:
+  - "22"
+  - "80"
+  - "443"
+  - "2376"
+  - "2379"
+  - "2380"
+  - "6443"
+  - "9099"
+  - "10250"
+  - "10254"
+firewall_allowed_udp_ports:
+  - "8472"
+firewall_additional_rules:
+  - "iptables -A INPUT -p tcp --match multiport --dports 30000:32767 -j ACCEPT"
+  - "iptables -A INPUT -p udp --match multiport --dports 30000:32767 -j ACCEPT"

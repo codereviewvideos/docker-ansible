@@ -1,0 +1,8 @@
+---
+  - name: Rancher 2 Load Balancers
+    hosts: rancher-2-load-balancers
+    roles:
+      - codereviewvideos.common
+      - geerlingguy.firewall
+      - nginxinc.nginx
+      - jdauphant.nginx

@@ -1,0 +1,6 @@
+---
+- src: singleplatform-eng.users 
+  version: v1.2.5
+
+- src: geerlingguy.docker
+  version: 2.5.2

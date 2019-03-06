@@ -43,4 +43,4 @@ run_playbook:
 		-v $(CURDIR):/crv-ansible \
 		-w /crv-ansible \
 		williamyeh/ansible:alpine3 \
-		ansible-playbook -i production site.yml $(cmd)
+		ansible-playbook -i production.yml site.yml $(cmd)

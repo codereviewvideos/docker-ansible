@@ -1,8 +1,0 @@
-etcd-0 ansible_host=68.183.43.205 ansible_python_interpreter=/usr/bin/python3
-loadbalancer ansible_host=68.183.42.47 ansible_python_interpreter=/usr/bin/python3
-
-[rancher-2-kubernetes-nodes]
-etcd-0
-
-[rancher-2-load-balancers]
-loadbalancer

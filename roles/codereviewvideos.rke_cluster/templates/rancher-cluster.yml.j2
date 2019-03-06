@@ -1,0 +1,24 @@
+#{{ ansible_managed }}
+
+nodes:
+  {% for host in groups['etcd'] %}
+- address: "{{ hostvars[host]['ansible_host'] }}"
+    user: "{{ hostvars[host].users[0].username }}"
+    role: [etcd]
+  {% endfor %}
+
+  {% for host in groups['controlplane'] %}
+- address: "{{ hostvars[host]['ansible_host'] }}"
+    user: "{{ hostvars[host].users[0].username }}"
+    role: [controlplane]
+  {% endfor %}
+
+  {% for host in groups['worker'] %}
+- address: "{{ hostvars[host]['ansible_host'] }}"
+    user: "{{ hostvars[host].users[0].username }}"
+    role: [worker]
+  {% endfor %}
+
+services:
+  etcd:
+    snapshot: true

@@ -1,0 +1,27 @@
+#Ansible managed
+
+nodes:
+  - address: "68.183.43.206"
+    user: "rancherk8s"
+    role: [etcd]
+  - address: "68.183.43.205"
+    user: "rancherk8s"
+    role: [etcd]
+  
+  - address: "69.184.44.210"
+    user: "rancherk8s"
+    role: [controlplane]
+  - address: "69.184.44.211"
+    user: "rancherk8s"
+    role: [controlplane]
+  
+  - address: "118.183.28.4"
+    user: "rancherk8s"
+    role: [worker]
+  - address: "70.183.3.205"
+    user: "rancherk8s"
+    role: [worker]
+  
+services:
+  etcd:
+    snapshot: true

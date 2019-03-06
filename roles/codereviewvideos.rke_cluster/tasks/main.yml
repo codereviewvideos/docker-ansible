@@ -1,0 +1,7 @@
+---
+# tasks file for codereviewvideos.rke_cluster
+- name: Create the rancher-cluster.yml file
+  local_action:
+    module: template
+    src: rancher-cluster.yml.j2
+    dest: /crv-ansible/rancher-cluster.yml

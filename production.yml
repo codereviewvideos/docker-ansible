@@ -2,19 +2,19 @@
 all:
   hosts:
     etcd-0:
-      ansible_host: 68.183.43.205
+      ansible_host: 134.209.23.202
     etcd-1: 
-      ansible_host: 68.183.43.206
+      ansible_host: 134.209.23.201
     controlplane-0: 
-      ansible_host: 69.184.44.210
+      ansible_host: 134.209.23.203
     controlplane-1: 
-      ansible_host: 69.184.44.211
+      ansible_host: 134.209.20.61
     worker-0: 
-      ansible_host: 70.183.3.205
+      ansible_host: 134.209.23.209
     worker-1: 
-      ansible_host: 118.183.28.4
+      ansible_host: 134.209.23.208
     loadbalancer:
-      ansible_host: 99.183.1.47
+      ansible_host: 134.209.23.210
 
   children:
     rancher-2-kubernetes-nodes:

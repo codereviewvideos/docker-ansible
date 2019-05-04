@@ -5,3 +5,4 @@
     module: template
     src: rancher-cluster.yml.j2
     dest: /crv-ansible/rancher-cluster.yml
+    unsafe_writes: yes # crikey!
